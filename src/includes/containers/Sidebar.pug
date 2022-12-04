@@ -1,0 +1,99 @@
+.Sidebar
+  .Sidebar-avatar
+    .Sidebar-avatar-wrapper
+      img(src="./assets/images/image-avatar.png" alt="")
+
+  h4.Title.flex.justify-center #[span.text-center Thông tin cá nhân]
+
+  .Sidebar-personal.Sidebar-group
+    .Sidebar-personal-row.flex.items-start
+      .Sidebar-personal-icon.blue
+        img(src="./assets/icons/icon-user.svg" alt="")
+      p.SubText Họ và tên:
+      p.Text Hồ Việt Hùng
+    .Sidebar-personal-row.flex.items-start
+      .Sidebar-personal-icon.red
+        img(src="./assets/icons/icon-calendar.svg" alt="")
+      p.SubText Ngày sinh:
+      p.Text 01/06/1984
+    .Sidebar-personal-row.flex.items-start
+      .Sidebar-personal-icon.blue
+        img(src="./assets/icons/icon-calendar-2.svg" alt="")
+      p.SubText Số năm kinh nghiệm:
+      p.Text 14 năm
+    .Sidebar-personal-row.flex.items-start
+      .Sidebar-personal-icon.orange
+        img(src="./assets/icons/icon-briefcase.svg" alt="")
+      p.SubText Nghề nghiệp:
+      p.Text Kỹ sư xây dựng
+    .Sidebar-personal-row.flex.items-start
+      .Sidebar-personal-icon.blue
+        img(src="./assets/icons/icon-graduation-cap.svg" alt="")
+      p.SubText Trình độ học vấn:
+      p.Text Thạc sỹ kỹ sư xây dựng
+    .Sidebar-personal-row.flex.items-start
+      .Sidebar-personal-icon.red
+        img(src="./assets/icons/icon-email.svg" alt="")
+      p.SubText Email:
+      p.Text.break-word hoviethung@wefly-str.com
+    .Sidebar-personal-row.flex.items-start
+      .Sidebar-personal-icon.blue
+        img(src="./assets/icons/icon-building.svg" alt="")
+      p.SubText Đơn vị công tác:
+      p.Text Công ty TNHH Kết cấu WEFLY
+
+  h4.Title.flex #[span QUÁ TRÌNH CÔNG TÁC]
+
+  .Sidebar-group 
+    +Timeline({
+      title: '2007 - 2010',
+      active: true,
+      suffixTitle: 'Nơi công tác',
+      data: [
+        'Công ty CP Đầu tư Xây dựng Hà Thành',
+      ],
+    })
+
+    +Timeline({
+      title: '2010 - 2015',
+      active: true,
+      suffixTitle: 'Nơi công tác',
+      data: [
+        'Công ty CP Tư vấn đầu tư và Thiết kế Xây dựng Việt Nam (CDC)',
+      ],
+    })
+
+    +Timeline({
+      title: '2015 - Nay',
+      active: true,
+      suffixTitle: 'Nơi công tác',
+      data: [
+        'Công ty TNHH Kết cấu WEFLY',
+      ],
+    })
+
+  h4.Title.flex #[span CÁC KHÓA ĐÀO TẠO KHÁC]
+
+  .Sidebar-group 
+    +Timeline({
+      title: '2007 - 2010',
+      active: true,
+      suffixTitle: 'Chứng chỉ - bằng cấp',
+      data: [
+        'Thạc sỹ kỹ thuật - Đại học xây dựng Hà Nội',
+      ],
+    })
+
+    +Timeline({
+      title: '12/2013',
+      active: true,
+      suffixTitle: 'Chứng chỉ - bằng cấp',
+      data: [
+        'Khóa tập huấn "Công nghệ tiên tiến trong thiết kế và thi công nhà cao và siêu cao"',
+      ],
+    })
+
+  h4.Title
+  .Sidebar-qr 
+    .Sidebar-qr-wrapper
+      img(src="./assets/images/image-qr.png" alt="")

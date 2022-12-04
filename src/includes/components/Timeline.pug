@@ -1,0 +1,21 @@
+mixin Timeline({ title, suffixTitle, data, active, type, classSuffixTitle })
+  .Timeline(class=`${active ? 'active' : ''} ${type || ''}`)
+    if (type === 'expand')
+      .Timeline-header
+        .Timeline-header-tag.flex.items-center
+          span= title
+      .Timeline-body 
+        .SubTitle(class=classSuffixTitle || false)= suffixTitle
+
+        each item in data 
+          .Text= item
+    else
+      .Timeline-header.flex.items-center.justify-between
+        .Timeline-header-tag.flex.items-center
+          span= title
+        if (suffixTitle)
+          .SubTitle.text-right= suffixTitle
+
+      .Timeline-body 
+        each item in data 
+          .Text= item

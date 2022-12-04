@@ -1,0 +1,112 @@
+.Timeline {
+  position: relative;
+
+  &.active {
+    .Timeline {
+      &-header {
+        &-tag {
+          background-image: url("data:image/svg+xml,%3Csvg width='169' height='40' viewBox='0 0 169 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M154 0.503538C154 0.225441 153.775 0 153.496 0H5C2.23858 0 0 2.23858 0 5V35C0 37.7614 2.23858 40 5 40H153.496C153.775 40 154 39.7746 154 39.4965C154 39.3792 154.041 39.2656 154.116 39.1752L167.358 23.1896C168.89 21.3394 168.89 18.6606 167.358 16.8104L154.116 0.824758C154.041 0.734434 154 0.620826 154 0.503538Z' fill='%233B5998'/%3E%3C/svg%3E%0A");
+          background-size: cover;
+          background-position: center;
+
+          span {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &.expand {
+    display: flex;
+
+    &:not(:last-child)::before {
+      left: calc(16.9rem + 2.1rem);
+    }
+
+    .Timeline {
+
+      &-header {
+        flex: 0 0 16.9rem;
+        max-width: 16.9rem;
+        height: 4rem;
+
+        &::before {
+          left: calc(100% + 1.4rem);
+        }
+
+        &-tag {
+          span {
+            transform: translateX(1rem);
+          }
+        }
+      }
+
+      &-body {
+        padding: 1.2rem 0 1.2rem calc(4rem + 1.2rem + 1.4rem);
+
+        .SubTitle {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+
+    &::before {
+      position: absolute;
+      width: 2px;
+      height: calc(100% + 3rem);
+      content: '';
+      background: $chambray;
+      top: 1.5rem;
+      left: -1.9rem;
+      z-index: 1;
+    }
+  }
+
+  &-header {
+    position: relative;
+    column-gap: 1.6rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background: $white;
+      border: 2px solid $chambray;
+      left: calc(-1.4rem - 1.2rem);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    &-tag {
+      flex: 0 0 16.9rem;
+      max-width: 16.9rem;
+      height: 4rem;
+
+      span {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        font-weight: 700;
+        color: $chambray;
+        transform: translateX(1rem);
+      }
+    }
+  }
+
+  &-body {
+    padding: 1.5rem 0;
+
+    .Text {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

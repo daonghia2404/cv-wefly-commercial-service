@@ -1,0 +1,73 @@
+.Header {
+  &-top {
+    background: $danube;
+    padding: 1.2rem;
+
+    &-title {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      color: $white;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  &-bottom {
+    position: relative;
+    padding: 2.4rem;
+    min-height: 44rem;
+    background: url('../images/bg-header.png');
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+      @include fullAbsolute;
+      content: '';
+      background: $chambray;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    &-wrapper {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &-title {
+    font-size: 5.2rem;
+    line-height: 6.5rem;
+    color: $white;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+    text-align: center;
+  }
+
+  &-description {
+    position: relative;
+    text-align: center;
+    color: $white;
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      width: 8rem;
+      height: 1px;
+      background: $white;
+      content: '';
+    }
+
+    &::before {
+      left: -2rem;
+      transform: translate(-100%, -50%);
+    }
+
+    &::after {
+      right: -2rem;
+      transform: translate(100%, -50%);
+    }
+  }
+}
