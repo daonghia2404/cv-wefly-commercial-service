@@ -57,7 +57,7 @@
 
     &::before {
       position: absolute;
-      width: 2px;
+      width: .2rem;
       height: calc(100% + 3rem);
       content: '';
       background: $chambray;
@@ -78,7 +78,7 @@
       height: 1.2rem;
       border-radius: 50%;
       background: $white;
-      border: 2px solid $chambray;
+      border: .2rem solid $chambray;
       left: calc(-1.4rem - 1.2rem);
       top: 50%;
       transform: translateY(-50%);
